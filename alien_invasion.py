@@ -30,6 +30,7 @@ class AlienInvasion:
             # Отображение последнего прорисованного экрана.
             pygame.display.flip()
 
+
 if __name__ == '__main__':
     # создание экземпляра и запуск игры.
     ai = AlienInvasion()
