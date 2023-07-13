@@ -26,10 +26,15 @@ class AlienInvasion:
             self._update_screen()
 
     def _check_events(self):
-        # Обрабатывается нажатия клавиш и события мыши.
+        """Обрабатывается нажатия клавиш и события мыши."""
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RIGHT:
+                    # Переместить корабль вправо.
+                    self.ship.rect.x += 1
+
 
     def _update_screen(self):
         """Обновляет изображение на экране и отображает новый экран."""
